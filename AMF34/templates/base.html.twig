@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block meta %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        {% endblock %}
+        <title>{% block title %}AMF34 | Accueil{% endblock %}</title>
+        {% block stylesheets %}
+        <link rel="stylesheet" href="css/flickity.css" media="screen">
+		<link href="css/style.css" rel='stylesheet' type='text/css' />
+        <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+        {% endblock %}
+        {% block scripts %}
+        <script src="js/jquery.min.js"></script>
+		<script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+        {% endblock %}
+    </head>
+    <body>
+        {% block nav %}
+        <div class="top-header bg">
+				<div class="navbar navbar-main navmenu">			
+					<div class="container" style="padding: 10px;">
+						<img src="images/logo.png" style="max-width: 200px;">
+						<button type="button" class="navbar-toggle"><img src="images/nav-icon.png" style="background-color: transparent; border: none;"></i></button>
+						<div class="header-info text-center">
+							<div class="container">
+								<h1 style="color:#63bbe4;" id="stepsId">Association des Maires de France<label id="steps2" style="color:white;">du département de l'Hérault</label></h1>
+								<p id="steps3" style="font-weight:900; color: #b44c2c;">"Avec les élus locaux, l'hérault avance"</p>
+							</div>
+						</div>
+						<div class="collapse navbar-collapse" style="display: none; opacity: 1; height: 0px;">
+							<center>
+							<ul class="nav navbar-nav">
+								<li class="dropdown" id="menu20">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#">L'association</a>
+									<ul class="dropdown-menu multi-level">
+										<li id="menu71"><a href="#">Présentation de l'AMF</a></li>
+										<li id="menu72"><a href="#">Le comité</a></li>
+									</ul>
+								</li>
+								<li class="dropdown" id="menu2">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#">Actualité</a>
+									<ul class="dropdown-menu multi-level">
+										<li id="menu9"><a href="#">A la une</a></li>
+										<li id="menu14"><a href="#">Réunions</a></li>
+										<li id="menu24"><a href="#">Bulletins trimestriels</a></li>
+										<li id="menu25"><a href="#">Articles de presse</a></li>
+										<li id="menu26"><a href="#">Interventions</a></li>
+									</ul>
+								</li>
+								<li class="dropdown" id="menu3">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#">Evènements</a>
+									<ul class="dropdown-menu multi-level">
+										<li id="menu41"><a href="#">Municipales</a></li>
+										<li id="menu37"><a href="#">Salon des maires</a></li>
+										<li id="menu74"><a href="#">Congrès des maires</a></li>
+										<li id="menu36"><a href="#">Assemblées générales</a></li>
+										<li id="menu43"><a href="#">A venir</a></li>
+									</ul>
+								</li>
+								<li class="dropdown" id="menu5">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#">Service Juridique</a>
+									<ul class="dropdown-menu multi-level">
+										<li id="menu58"><a href="#">Sous-menu 1</a></li>
+										<li id="menu59"><a href="#">Sous-menu 2</a></li>
+									</ul>
+								</li>
+								<li class="dropdown" id="menu6">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#">Annuaire</a>
+									<ul class="dropdown-menu multi-level">
+										<li id="menu77"><a href="#">Liens utiles</a></li>
+										<li id="menu76"><a href="#">Numeros utiles</a></li>
+									</ul>
+								</li>
+								<li class="socialMenu">
+									<a href="https://www.facebook.com/garantiesOptimales"><i class="fab fa-facebook"></i></a>
+								</li>
+								<li class="socialMenu">
+									<a href="https://twitter.com/GOptimales"><i class="fab fa-twitter"></i></a>
+								</li>
+								<li class="socialMenu">
+									<a href="https://www.linkedin.com/company/garanties-optimales/"><i class="fab fa-linkedin"></i></a>
+								</li>
+							</ul>
+							</center>
+						</div>	
+					</div>
+				</div>
+			</div>
+			<!-- //End-header-->
+        {% endblock %}
+        {% block body %}{% endblock %}
+        {% block footer %}
+        			<footer>
+				<div class="container-footer">
+						<div class="footer-link-principal col-lg-4 col-md-8 text-center">
+							<li>Président - Mr Frédéric Roig</li>
+							<li>Association des Maires de l'Hérault</li>
+							<li>04.67.03.34.23</li>
+							<li>Maison des élus</li>
+							<li>Mas d'alco</li>
+							<li>1977 Avenue des Moulins</li>
+							<li>34080 Montpellier</li>
+						</div>
+						<div class="footer-link-about col-lg-4 col-md-8 text-center">
+							<ul style="list-style-type: none;">
+								<li><a href="https://www.facebook.com/garantiesOptimales"><i class="fab fa-facebook"></i></a>
+								<a href="https://twitter.com/GOptimales"><i class="fab fa-twitter"></i></a>
+								<a href="https://www.linkedin.com/company/garanties-optimales/"><i class="fab fa-linkedin"></i></a></li>
+								<li><a href="#">L'association</a></li>
+								<li><a href="#">Actualité</a></li>
+								<li><a href="#">Evènements</a></li>
+								<li><a href="#">Service Juridique</a></li>
+								<li><a href="#">Annuaire</a></li>
+								<li><a href="#">Contact</a></li>
+								<li><a href="#">Gestion des cookies</a></li>
+							</ul>
+						</div>
+						<div class="col-lg-4 col-md-8 text-center">
+							<img src="images/logo.png" alt="logo de l'Association des Maires de l'Hérault">
+						</div>
+					</div>
+			</footer>
+        {% endblock %}
+        {% block javascripts %}
+        			<script type="text/javascript">
+				$(document).ready(function() {
+									
+					var defaults = {
+						containerID: 'toTop', // fading element id
+						containerHoverID: 'toTopHover', // fading element hover id
+						scrollSpeed: 1200,
+						easingType: 'linear' 
+				};
+																
+				$().UItoTop({ easingType: 'easeOutCubic' });
+										
+				});
+			</script>
+				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+			</div>
+			<!-- footer -->
+			<link rel="stylesheet" href="css/swipebox.css">
+			<script src="js/jquery.swipebox.min.js"></script> 
+			    <script type="text/javascript">
+					jQuery(function($) {
+						$(".swipebox").swipebox();
+					});
+		
+			</script>
+			<script src="js/flickity.js"></script>
+			<script>(function (d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+				fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));
+			</script>
+			<script>
+				$(function () {
+					var pull = $('#pull');
+					menu = $('nav ul');
+					menuHeight = menu.height();
+					$(pull).on('click', function (e) {
+					e.preventDefault();
+					menu.slideToggle();
+				});
+				$(window).resize(function () {
+					var w = $(window).width();
+					if (w > 320 && menu.is(':hidden')) {
+						menu.removeAttr('style');
+					}
+				});
+				});
+			</script>
+			<script>
+				function changecouleur() {
+					var steps1 = document.getElementById("stepsId");
+					if (steps1.style.color == 'white')
+						steps1.style.color = '#63bbe4';
+					else
+						steps1.style.color = 'white';
+					}
+					setInterval(changecouleur, 900);
+			</script>
+			<script>
+				function changecouleur2() {
+					if (document.getElementById("steps2").style.color == 'white')
+						document.getElementById("steps2").style.color = '#63bbe4';
+					else
+						document.getElementById("steps2").style.color = 'white';
+					}
+					setInterval(changecouleur2, 900);
+			</script>
+			<script>
+				function changecouleur3() {
+					if (document.getElementById("steps3").style.color == 'white')
+						document.getElementById("steps3").style.color = '#d64418';
+					else
+						document.getElementById("steps3").style.color = 'white';
+					}
+					setInterval(changecouleur3, 500);
+			</script>
+        {% endblock %}
+    </body>
+</html>
