@@ -8,16 +8,16 @@
         {% endblock %}
         <title>{% block title %}AMF34 | Accueil{% endblock %}</title>
         {% block stylesheets %}
-        <link rel="stylesheet" href="css/flickity.css" media="screen">
-		<link href="css/style.css" rel='stylesheet' type='text/css' />
-        <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+		<link href="{{ asset('assets/css/bootstrap.css') }}" rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{{ asset('assets/css/flickity.css')}}" media="screen">
+		<link href="{{ asset('assets/css/style.css') }}" rel='stylesheet' type='text/css' />
         {% endblock %}
         {% block scripts %}
-        <script src="js/jquery.min.js"></script>
+        <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
 		<script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
-		<script type="text/javascript" src="js/move-top.js"></script>
-		<script type="text/javascript" src="js/easing.js"></script>
-		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="{{ asset('assets/js/move-top.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('assets/js/easing.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('assets/js/script.js') }}"></script>
 		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
         {% endblock %}
     </head>
@@ -26,8 +26,8 @@
         <div class="top-header bg">
 				<div class="navbar navbar-main navmenu">			
 					<div class="container" style="padding: 10px;">
-						<img src="images/logo.png" style="max-width: 200px;">
-						<button type="button" class="navbar-toggle"><img src="images/nav-icon.png" style="background-color: transparent; border: none;"></i></button>
+						<img src="{{ asset('assets/images/logo.png') }}" style="max-width: 200px;">
+						<button type="button" class="navbar-toggle"><img src="{{ asset('assets/images/nav-icon.png') }}" style="background-color: transparent; border: none;"></i></button>
 						<div class="header-info text-center">
 							<div class="container">
 								<h1 style="color:#63bbe4;" id="stepsId">Association des Maires de France<label id="steps2" style="color:white;">du département de l'Hérault</label></h1>
@@ -99,7 +99,8 @@
         {% block footer %}
         			<footer>
 				<div class="container-footer">
-						<div class="footer-link-principal col-lg-4 col-md-8 text-center">
+						<div class="footer-link-principal col-lg-4 col-md-8 text-center"><br>
+						<ul style="list-style-type:none;">
 							<li>Président - Mr Frédéric Roig</li>
 							<li>Association des Maires de l'Hérault</li>
 							<li>04.67.03.34.23</li>
@@ -107,7 +108,8 @@
 							<li>Mas d'alco</li>
 							<li>1977 Avenue des Moulins</li>
 							<li>34080 Montpellier</li>
-						</div>
+						</ul>
+						</div><br>
 						<div class="footer-link-about col-lg-4 col-md-8 text-center">
 							<ul style="list-style-type: none;">
 								<li><a href="https://www.facebook.com/garantiesOptimales"><i class="fab fa-facebook"></i></a>
@@ -123,7 +125,7 @@
 							</ul>
 						</div>
 						<div class="col-lg-4 col-md-8 text-center">
-							<img src="images/logo.png" alt="logo de l'Association des Maires de l'Hérault">
+							<img src="{{ asset('assets/images/logo-full.png') }}" alt="logo de l'Association des Maires de l'Hérault">
 						</div>
 					</div>
 			</footer>
@@ -146,15 +148,15 @@
 				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 			</div>
 			<!-- footer -->
-			<link rel="stylesheet" href="css/swipebox.css">
-			<script src="js/jquery.swipebox.min.js"></script> 
+			<link rel="stylesheet" href="{{ asset('assets/css/swipebox.css') }}">
+			<script src="{{ asset('assets/js/jquery.swipebox.min.js') }}"></script> 
 			    <script type="text/javascript">
 					jQuery(function($) {
 						$(".swipebox").swipebox();
 					});
 		
 			</script>
-			<script src="js/flickity.js"></script>
+			<script src="{{ asset('assets/js/flickity.js') }}"></script>
 			<script>(function (d, s, id) {
 				var js, fjs = d.getElementsByTagName(s)[0];
 				if (d.getElementById(id)) return;
