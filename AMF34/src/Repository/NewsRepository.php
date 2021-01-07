@@ -19,6 +19,15 @@ class NewsRepository extends ServiceEntityRepository
         parent::__construct($registry, News::class);
     }
 
+    public function findLatestNews()
+    {
+        return $this->createQueryBuilder('n')
+            ->orderBy('n.createdAt', 'DESC')
+            ->setMaxResults(6)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
     // /**
     //  * @return News[] Returns an array of News objects
     //  */
@@ -47,4 +56,5 @@ class NewsRepository extends ServiceEntityRepository
         ;
     }
     */
+    
 }

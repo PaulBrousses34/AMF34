@@ -42,6 +42,21 @@ class Events
      */
     private $slug;
 
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     */
+    private $date;
+
+    /**
+     * @ORM\Column(type="string", length=1000, nullable=true)
+     */
+    private $location;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $hour;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -49,24 +64,24 @@ class Events
 
     public function getTitle(): ?string
     {
-        return $this->Title;
+        return $this->title;
     }
 
-    public function setTitle(string $Title): self
+    public function setTitle(string $title): self
     {
-        $this->Title = $Title;
+        $this->title = $title;
 
         return $this;
     }
 
     public function getContent(): ?string
     {
-        return $this->Content;
+        return $this->content;
     }
 
-    public function setContent(string $Content): self
+    public function setContent(string $content): self
     {
-        $this->Content = $Content;
+        $this->content = $content;
 
         return $this;
     }
@@ -106,4 +121,41 @@ class Events
 
         return $this;
     }
+
+    public function getDate(): ?string
+    {
+        return $this->date;
+    }
+
+    public function setDate(?string $date): self
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    public function getLocation(): ?string
+    {
+        return $this->location;
+    }
+
+    public function setLocation(?string $location): self
+    {
+        $this->location = $location;
+
+        return $this;
+    }
+
+    public function getHour(): ?string
+    {
+        return $this->hour;
+    }
+
+    public function setHour(?string $hour): self
+    {
+        $this->hour = $hour;
+
+        return $this;
+    }
+
 }

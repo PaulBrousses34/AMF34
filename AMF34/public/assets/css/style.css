@@ -3322,10 +3322,10 @@ header.scroll-css .icon-top .icon-menu .navbar-brand {
 
 .gallery-cell {
   width: 66%;
-  padding: 3rem;
+  padding: 2rem;
   height: 300px;
   margin-right: 10px;
-  background: white;
+  background: lightgrey;
   background-size: cover;
   background-repeat: no-repeat;
   counter-increment: gallery-cell;
@@ -3376,3 +3376,106 @@ header.scroll-css .icon-top .icon-menu .navbar-brand {
 footer {
 	margin-top: 20px;
 }
+
+/* external css: flickity.css */
+
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+.carousel {
+  background: #EEE;
+}
+
+.carousel-cell {
+  width: 100%;
+  /*height: 200px;*/
+  height: 50%;
+  margin-right: 10px;
+  /*background: #8C8;
+  counter-increment: gallery-cell;*/
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  /*content: counter(gallery-cell);*/
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+
+/* big buttons, no circle */
+.flickity-prev-next-button {
+  width: 100px;
+  height: 100px;
+  background: transparent;
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+  fill: white;
+}
+.flickity-prev-next-button.no-svg {
+  color: white;
+}
+.flickity-prev-next-button:hover {
+  background: transparent;
+}
+/* hide disabled button */
+.flickity-prev-next-button:disabled {
+  display: none;
+}
+
+
+/* Style Caroussel Events */
+
+.eventsDate {
+	font-weight: bolder;
+	color:  darkred;
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.eventsTitle {
+	font-weight: bolder;
+	color:  darkblue;
+	font-size: 18px;
+	margin-bottom: 8px;	
+}
+
+.eventsHour {
+	font-weight: bolder;
+	color:  black;
+	font-size: 15px;
+	margin-bottom: 5px;	
+}
+
+.eventsLocation {
+	font-weight: bolder;
+	color:  black;
+	font-size: 15px;
+	margin-bottom: 5px;	
+}
+
+@media (max-width:769px) {
+.eventsContent {
+	display: none;
+}
+}
+
+.newsTitle{
+	color: black;
+	font-weight: bolder;
+	font-size:10px;
+
+}
+
+.imageNews{
+	width: auto !important;
+	height: auto !important;
+	margin: auto;
+	align-items: center;;
+}
+
