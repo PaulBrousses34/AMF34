@@ -1,73 +1,93 @@
 # **NOUVEAU SITE WEB AASSOCIATION DES MAIRES DE FRANCES DE L'HERAULT** 
 
+
+
 ![Logo AMF34](https://raw.githubusercontent.com/PaulBrousses34/AMF34/master/AMF34/public/images/logo.png)
 
+
+
 ## AMF34 ##
+
 ### *Avec les élus locaux, l'Hérault avance* 
 
+#### Projet de création d'un nouveau site web pour l'AMF34. En attente d'acceptation du devis ...
 
 ## 1. Présentation du projet
 
-### a) Présentation de la société
+### a) Présentation de l'association
 
-Créée en 2010, la société MGL Courtage (nouvellement LIGUORI ASSURANCES) basé à Sète (34200) est spécialisée dans le courtage en assurance pour les particuliers et professionnels. Société à taille humaine (2 employés), elle est aussi familiale (père et fils). 
+Créée en 1907, reconnue d’utilité publique dès 1933, l’AMF est aux côtés des maires et des présidents d’intercommunalité, dans le respect des valeurs et des principes qui ont prévalu depuis sa création : défense des libertés locales, appui concret et permanent aux élus dans la gestion au quotidien, partenariat loyal mais exigeant avec l’Etat pour toujours mieux préserver les intérêts des collectivités et de leurs groupements. 
+Plus de 34 000 maires et présidents d'intercommunalité en sont aujourd'hui adhérents. 
 
-Possédant un portefeuille client solide sur la ville de Sète et également aux alentours, le chiffre d’affaires stagne depuis quelques années (même si celui reste élevé). 
+L’histoire de l’AMF est celle de la défense des libertés locales. L’association veille sans relâche à ce que la décentralisation garantisse aux communes une réelle autonomie de gestion des affaires locales et s’implique avec force pour que les maires disposent de moyens juridiques et financiers suffisants pour assurer leurs missions. Du fait de la diversité de ses représentants et de la qualité de ses services, l’AMF est reconnu comme une force de proposition, en capacité réelle d’entretenir un dialogue permanent avec les pouvoirs publics. 
 
-Ambitieux, le fils et Gérant de l’association souhaite étendre sa zone de chalandise au niveau régional voir national, en créant une marque commerciale sur le net : Garanties Optimales. 
+Force de proposition et de représentation, l’AMF intervient comme interlocuteur privilégié des pouvoirs publics, très en amont des projets, partout où se jouent l’avenir des communes, de leurs groupements et les conditions de leur développement. 
+
+Dans le cadre de leur activité de conseil et d’aide à la décision, les services de l’AMF exercent un suivi continu de l’actualité législative et réglementaire des collectivités. Ils conduisent un travail d’expertise approfondie qui permet de délivrer des conseils personnalisés aux maires et aux présidents de communautés. 
 
 ### b) Les objectifs du site
 
-Le site aura pour objectif d’accroître l’activité de la société MGL Courtage et d’étendre sa zone de chalandise au niveau national.  
+L’Association de Maires de France du 34, souhaite redonner vie à son site “assomaires34.fr”, celui-ci étant quasiment à l’abandon, beaucoup de dépréciations y sont visibles, il ne possède plus de certificat SSL assurant une connexion sécurisée à ses utilisateurs et le code n’est plus adapté aux technologies actuelles.  
 
-Ce site devra permettre au client d’obtenir des devis en ligne ainsi que de souscrire en ligne à une assurance. 
+Reprendre le code déjà existant serait une perte de temps et d’aucune utilité, selon mon analyse, je propose donc de tout concevoir depuis le départ en repartant selon les mêmes principes que l’ancienne version mais en apportant de nouvelles fonctionnalités ainsi qu’en effectuant quelques améliorations au niveau de la structure du site et de ses grandes sections. Les objectifs du site restent les mêmes, donc, c’est avant tout un site d’information pour les maires ainsi que leurs collaborateurs.  
 
-Il servira également de plateforme d’échange de documents et d’assistance entre les clients et la société. 
+Ce site permettra aussi de contacter facilement les personnes faisant partie de l’organigramme de l’AMF34 et mettra à la disposition de tous ses visiteurs les dernières informations concernant les communes et les mairies. Il offrira également un annuaire de tous les membres de l’AMF. Le site peut être définit à la fois comme vitrine ainsi que comme un média en ligne. 
 
 ### c) La cible
 
-Toutes personnes majeures, de n’importe quelle CSP. Que ce soit particulier ou professionnel, de la France entière.  
+Le site sera ouvert à tous mais il s’adressera principalement aux personnes des mairies et plus particulièrement aux administrations de chaque mairie et majoritairement aux maires. Au niveau de l’âge des personnes de plus de 30ans des catégories socio-professionnelles intermédiaire (employés administratifs), cadres et professions intellectuelles supérieures.  
 
 ### d) Périmètre du projet 
 
 Le site se devra d’être totalement responsive (adaptable sur mobile, tablette et desktop), j’estime que le trafic sera très hétérogène en matière de support, d’où l’importance d’apporter une attention toute particulière à cela.  
 
-Le site en revanche ne nécessite pas d’être multilingue au vu de la cible (France). 
+Le site en revanche ne nécessite pas d’être multilingue au vu de la cible (uniquement des administrations françaises). 
+
+
+### e) Description de l'existant
+
+Actuellement aucun professionnel du Web ne s’occupe de la version déjà existante du site AMF34.  
+
+Les dépréciations y sont visibles (d’où la nécessité d’une veille technologique et d’une maintenance régulière sur un site internet), beaucoup de problèmes de dispositions des éléments composants le site le rende moins “intuitifs”. 
+
+ Le non renouvellement d’un certificat SSL (indiqué dans la barre d’URL du navigateur comme non sécurisé) peut faire fuir certains utilisateurs et ne donnent pas une bonne image du site de l’association sur le Web. 
+
+Le site possède un nom de domaine mais je propose de le changer (faible coût, prévu dans mes frais de maintenance) afin de l’associer avec des noms de domaines email ainsi que d’éviter des démarches parfois complexes entre les différents hébergeurs pour transférer un nom de domaine. 
+
+L’analyse du code source montre que les balises Meta ne sont pas optimisées de manière à augmenter la visibilité sur les moteurs de recherche (google, bing, …) 
+
+L’ancienne version propose des logos et des articles que l’on peut surement récupérer. Les éléments qu’il contient peuvent permettre de ne pas faire intervenir un graphiste. 
 
 
 ## 2. Description graphique
 
 ### a) Charte Graphique
 
-Je possède déjà le logo de MGL Courtage, et à partir de celui pourrait définir une palette couleur. 
+Je possède actuellement le logo de l’AMF34, à partir de celui-ci j’ai créé une palette de couleur ainsi qu’à partir des couleurs du logo du département de l’Hérault.  A partir d’une de ses deux palettes (où contre-proposition), nous allons déterminer les couleurs dominantes qui composeront le site. 
 
 ##### Les logos en ma possession : 
 
-![Logos Société](https://raw.githubusercontent.com/PaulBrousses34/GarantiesOptimales/master/public/assets/images/photos/logoDouble.png)
+![Logos AMF34 et Hérault](https://raw.githubusercontent.com/PaulBrousses34/AMF34/master/AMF34/public/images/logoscdc.png)
 
-##### La palette graphique à partir du logo : 
+##### Les deux propositions : 
 
-![Palette graphique](https://raw.githubusercontent.com/PaulBrousses34/GarantiesOptimales/master/public/assets/images/photos/palette.png)
+![Palettes graphiques](https://raw.githubusercontent.com/PaulBrousses34/AMF34/master/AMF34/public/images/palettes.png)
 
 ### b) Design
 
-Le design du site se veut plutôt simpliste et intuitif. La première version doit être mis en ligne assez rapidement et certainement des améliorations sur le design seront mis en œuvre dans les versions suivantes. 
+Le design vis-à-vis de l’ancienne version se verra bien évidemment plus moderne et adapté, mais également plus “intuitif”, mot qui reviendra souvent du fait de la cible du site ainsi que de la nécessité au regard de son objectif.  
 
 ### c) Maquettes
 
-Au regard des éléments en ma possession et après un entretien avec Mr Liguori, j’ai effectué les maquettes du site. 
+Au regard des éléments en ma possession et après un entretien avec Mr Xicoy, j’ai proposé une maquette avec la palette couleur correspondant au logo de l’AMF34. En attendant une validation, et des modifications afin de la valider je n’ai pas encore décliné aux autres pages et légendé mes maquettes.  
 
 ##### Proposition page d’accueil Desktop : 
 
-![Maquette Home Desktop](https://raw.githubusercontent.com/PaulBrousses34/GarantiesOptimales/master/public/assets/images/photos/maquetteHomeDesktop.png)
+![Maquette Accueil Desktop](https://raw.githubusercontent.com/PaulBrousses34/AMF34/master/AMF34/public/images/MaquettePC.png)
 
 ##### Proposition page d’accueil Mobile :
 
-![Maquette Home Mobile](https://raw.githubusercontent.com/PaulBrousses34/GarantiesOptimales/master/public/assets/images/photos/maquetteHomeMobile.png)
-
-##### Legende maquette :
-
-![Legende](https://raw.githubusercontent.com/PaulBrousses34/GarantiesOptimales/master/public/assets/images/photos/legendeMaquette.png)
+![Maquette Accueil Mobile](https://raw.githubusercontent.com/PaulBrousses34/AMF34/master/AMF34/public/images/MaquetteMobile.png)
 
 
 ## 3. Description fonctionnelle et technique 
