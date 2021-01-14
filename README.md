@@ -83,7 +83,7 @@ Au regard des éléments en ma possession et après un entretien avec Mr Xicoy, 
 
 ##### Proposition page d’accueil Desktop/Mobile : 
 
-![Maquette Accueil Desktop](https://raw.githubusercontent.com/PaulBrousses34/AMF34/master/AMF34/public/images/Maquettes.png)
+![Maquette Accueil Desktop](https://raw.githubusercontent.com/PaulBrousses34/AMF34/master/AMF34/public/images/maquettes.png)
 
 
 ## 3. Description fonctionnelle et technique 
