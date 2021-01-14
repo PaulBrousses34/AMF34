@@ -1,5 +1,5 @@
-# **NOUVEAU SITE WEB ASSOCIATION DES MAIRES DE FRANCES DE L'HERAULT** 
------------------------------------------------------------------------------------------------------------
+# **ASSOCIATION DES MAIRES DE FRANCE DE L'HERAULT** 
+
 
 
 ![Logo AMF34](https://raw.githubusercontent.com/PaulBrousses34/AMF34/master/AMF34/public/images/logo.png)
@@ -99,9 +99,9 @@ Au regard des éléments en ma possession et après un entretien avec Mr Xicoy, 
 
 ### a) Arborescence du site
 
-![Arborescence](https://raw.githubusercontent.com/PaulBrousses34/GarantiesOptimales/master/public/arborescence.png)
+Incompléte en attendant validation et entretien
+![Arborescence](https://raw.githubusercontent.com/PaulBrousses34/AMF34/master/AMF34/public/images/Arborescence.png)
 
-[Voir en meilleure qualité](https://www.gloomaps.com/tKhyTdfZmj )
 
 ### b) Description fonctionnelle
 
