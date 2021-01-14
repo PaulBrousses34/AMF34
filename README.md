@@ -107,26 +107,31 @@ Incompléte en attendant validation et entretien
 
 Au regard de notre premier entretien, nous avons défini les grandes lignes du futur site et évalué les besoins. L’application devra donc comprendre : 
 -     Un Back-Office. 
--     Un espace membre, où retrouver ses documents, les échanger et déclarer un sinistre 
+-     Un espace membre mais sans possibilité d’inscription, car les utilisateurs se verront attribué des identifiants de connexion à cet espace membre pour que cet espace ne soit pas accessible à des personnes non autorisées. 
+-     Un moteur de recherche interne
 -     Une base de données. 
 -     Une possibilité d’inscription à la newsletter. 
 
 On peut donc identifier 3 types d’utilisateurs : 
 -     Le visiteur ayant accès à l’ensemble du site (sauf espace membre et back office). 
--     L'utilisateur connecté bénéficiant d’un espace membre. 
+-     L'utilisateur connecté bénéficiant d’un espace membre (attribué par les administrateurs). 
 -     Les administrateurs ayant accès au back office. 
 
 
 ### c) Informations relatives aux contenus
 
-Les divers éléments amenés à alimenter l’application sont notamment des articles, des modifications, ajouts et suppressions de formules d’assurances, l’ajout de nouveau produits. 
+Les divers éléments amenés à alimenter l’application sont notamment des articles, des événements à venir, des documents téléchargeables et des photos.  
 
-Tout cela sera fourni par les compagnies d’assurance et par le gérant de la société. Ce contenu sera intégré à la base de données.  
+Tout cela sera fourni par l’administration de l’AMF34. Ce contenu sera intégré à la base de données.  
 
-Le contenu devra dans le même temps être ajouté aux réseaux sociaux. 
+Le contenu devra dans le même temps être ajouté aux réseaux sociaux. Ma proposition effectuée via mon devis maintenance et gestion du contenu comprend l’ajout et la gestion du contenu au site ainsi qu’aux réseaux sociaux. 
 
 
-### d) Technologies utilisées 
+### d) Contraintes techniques
+
+Mr Xicoy m’a fait part d’une demande sur laquelle je n’ai pas forcement la main, développé une relation entre le site et une plateforme externe. Une étude sur sa faisabilité est nécessaire, seuls les développeurs de la plateforme en question peuvent m’apporter une réponse à cette problématique. Il faut donc prévoir une mise en relation avec les administrateurs de la plateforme. C’est actuellement la seule problématique de développement à laquelle je suis confronté dans ce projet. 
+
+### e) Technologies utilisées 
 
 #### Outils de conception et de stockage :  
 
@@ -172,60 +177,45 @@ J’utiliserai également Google Analytics afin d’avoir des informations sur l
 
 |En tant que|Je veux pouvoir|Afin de|
 |---    |:-:    |:-:    |
-| Visiteur |Consulter les actualités|Me tenir informé de l’actualité de l’assurance |       
-|       |Consulter les informations juridiques de la société |Connaître les mentions légales |
-|       |En savoir plus sur MGL Courtage |Afin de connaître la société|
-|       |Contacter la société via un formulaire de contact|Obtenir de renseignements, proposer quelque chose ou porter une réclamation |
-|       |Consulter les diverses assurances proposées|Me renseigner sur les propositions faites par Garanties Optimales|
+| Visiteur |Consulter les actualités|Me tenir informé de l’actualité|       
+|       |Consulter l’agenda|Me tenir informé des événements à venir |
+|       |Consulter les informations juridiques|Obtenir des renseignements d’ordre juridique|
+|       |En savoir plus sur l’AMF34|Afin de connaître l’association et ses objectifs|
+|       |Contacter un administrateur via un formulaire de contact|Obtenir de renseignements, proposer quelque chose ou porter une réclamation|
 |       |Obtenir un devis et/ou souscrire à une assurance|Souscrire ou obtenir un devis |
-|       |Créer un compte|Bénéficier d’un espace personnel|
-| Utilisateur connecté |Accéder à mes documents|Retrouver facilement les documents relatifs à mon/mes assurance(s)|
-|       |Echanger des documents facilement avec mon courtier|Faciliter l’échange de document|
-|       |Déclarer directement un sinistre en ligne|Faciliter la déclaration de sinistre|
+|       |Rechercher un élément du site via un moteur de recherche|Accéder rapidement à une information précise|
+| Utilisateur connecté |Accéder à l’annuaire des membres|Rechercher un numéro de téléphone, une adresse email, des informations sur un membre, ...|
 | Administrateur |Ajouter, modifier, supprimer un article|Gérer le contenu du site |
-|       |Ajouter, modifier, supprimer un utilisateur|Gérer le contenu du site |
-|       |Ajouter, modifier, supprimer un produit d’assurance|Gérer le contenu du site|
+|       |Ajouter, modifier, supprimer un membre|Gérer le contenu du site |
+|       |Ajouter, modifier, supprimer un évènement|Gérer le contenu du site|
 
 ### f) Dictionnaire des routes
 
 |Controller|URL|HTTP Method|Method|Title|Content|
 |---    |:-:    |:-:    |:-:    |:-:    |--:    |
 | **FrontOffice** |
-|HomeController|/|GET|home|Accueil|Actu, liste produit et contact|
-| |/contact-formulaire|GET-POST|contact|Contact|Formulaire de contact|
-|NewsletterController|/newsletter|GET|Browse|Actualités|Liste de tout les articles|
-| |/newsletter/{id}|GET|Read|Article|Un article|
-|AssuranceController|/assurances/categorie/{slug}|GET|Browse|Assurance par catégorie|Liste des produits par catégorie|
-||/assurances/sous-categorie/{slug}|GET|Browse|Assurance par sous-catégorie|Liste des produits par sous-catégorie|
-||/assurances/types/{slug}|GET|Browse|Assurance par type|Liste des produits par type|
-||/assurances/demande-devis|GET-POST|askDevis|Formulaire de demande de devis|Formulaire spécifique demande de devis|
-||/assurances/devis/{slug}|GET|Read|Devis {slug}|Affiche le tarificateur selon le produit souhaité|
-|UserController|/profil/{nom}/{id}|GET|Read|Mon espace personnel|Affiche les informations utilisateurs et les documents|
-||/profil/edition/ {nom}/{id}|GET-POST|Edit|Modifier mon profil|Affiche le formulaire de modification du profil|
-||/profil/suppression/{nom}/{id}|DELETE|Delete|Bouton de suppression|Supprimer mon profil|
-|SecurityController|/connexion/{nom}/{id}|GET – POST|app_login|Connexion|Formulaire de connexion|
+|HomeController|/|GET|home|Accueil|Actu et agenda|
+| |/contact|GET-POST|contact|Contact|Formulaire et infos|
+|InfoController|/actualites|GET|Browse|Actualités|Liste de toutes les actualités|
+| |/actualites/{slug}|GET|Read|Article {title}|Un article|
+|EventController|/agenda|GET|Browse|Les événements|Liste des événements|
+||/agenda/{slug}|GET|Read|Evenement {title}|Un evenement|
+|UserController|/profil/{id}|GET|Read|Mon espace personnel|Affiche les informations utilisateurs et autres membres|
+||/profil/edition/{id}|GET-POST|Edit|Modifier mon profil|Affiche le formulaire de modification du profil|
+||/profil/suppression/{id}|DELETE|Delete|Bouton de suppression|Supprimer mon profil|
+|SecurityController|/connexion|GET – POST|app_login|Connexion|Formulaire de connexion|
 ||/deconnexion|POST|app_logout|Déconnexion|Bouton ou lien de deconnexion|
 | **BackOffice** |
-|NewsletterCrudController|/admin/newsletter|GET|Browse|Toutes les actualités|Liste des actualités|
-||/admin/newsletter/{id}|GET|Read|{title} de l'article|Affichage d’un article en particulier|
-||/admin/newsletter/edition/{id}|GET-POST|Edit|Modifier un article|Formulaire de modification de l’article|
-||/admin/newsletter/ajouter|GET-POST|Add|Ajouter un article|Formulaire d’ajout d’un article|
-||/admin/newsletter/suppression/{slug}|DELETE|Delete|Suppression d'un article|Bouton de suppression d'un article|
-|SousCategorieCrudController|/admin/assurances/sous-categorie|GET|Browse|Liste de toutes les sous catégories|Affichage de la liste des types par sous catégorie|
-||/admin/sous-categorie/{slug}|GET|Read|Sous catégorie {slug}|Affichage d'une sous catégorie|
-||/admin/sous-categorie/edition/{slug}|GET-POST|Edit|Modifier une sous catégorie|Formulaire de modification d'une sous catégorie|
-||/admin/sous-categorie/ajouter|GET-POST|Add|Ajouter une sous catégorie|Formulaire d’ajout d’une sous catégorie|
-||/admin/sous-categorie/suppression/{slug}|DELETE|Delete|Suppression d'une sous catégorie|Bouton de suppression d'une sous catégorie|
-|TypeCrudController|/admin/assurances/types|GET|Browse|Liste de toutes les types|Affichage de la liste des types|
-||/admin/types/{slug}|GET|Read|Type {slug}|Affichage d'un type|
-||/admin/types/edition/{slug}|GET-POST|Edit|Modifier un type|Formulaire de modification d'un type|
-||/admin/types/ajouter|GET-POST|Add|Ajouter un type|Formulaire d’ajout d’un type|
-||/admin/types/suppression/{slug}|DELETE|Delete|Suppression d'un type|Bouton de suppression d'un type|
-|DocumentCrudController|/admin/document|GET|Browse|Liste de tous les documents|Affichage de la liste des documents|
-||/admin/document/{id}|GET|Read|Document {id}|Affichage d'un document|
-||/admin/document/edition/{slug}|GET-POST|Edit|Modifier un document|Formulaire de modification d'un document|
-||/admin/document/ajouter|GET-POST|Add|Ajouter un document|Formulaire d’ajout d’un document|
-||/admin/document/suppression/{slug}|DELETE|Delete|Suppression d'un document|Bouton de suppression d'un document|
+|InfoCrudController|/admin/actualites|GET|Browse|Toutes les actualités|Liste des actualités|
+||/admin/actualites/{id}|GET|Read|{title} de l'article|Affichage d’un article en particulier|
+||/admin/actualites/edition/{id}|GET-POST|Edit|Modifier un article|Formulaire de modification de l’article|
+||/admin/actualites/ajouter|GET-POST|Add|Ajouter un article|Formulaire d’ajout d’un article|
+||/admin/actualites/suppression/{id}|DELETE|Delete|Suppression d'un article|Bouton de suppression d'un article|
+|EventCrudController|/admin/evenement|GET|Browse|Liste de toutes les evenements|Affichage de la liste des evenements|
+||/admin/evenement/{id}|GET|Read|Evenement {name}|Affichage d'un evenement|
+||/admin/evenement/edition/{id}|GET-POST|Edit|Modifier un evenement|Formulaire de modification d'un evenement|
+||/admin/evenement/ajouter|GET-POST|Add|Ajouter un evenement|Formulaire d’ajout d'un evenement|
+||/admin/evenement/suppression/{id}|DELETE|Delete|Suppression d'un evenement|Bouton de suppression d'un evenement|
 |UtilisateurCrudController|/admin/utilisateurs|GET|Browse|Liste de tous les utilisateurs|Affichage de la liste des utilisateurs|
 ||/admin/utilisateur/{id}|GET|Read|Utilisateur {name}|Affichage d'un utilisateur|
 ||/admin/utilisateur/edition/{slug}|GET-POST|Edit|Modifier un utilisateur|Formulaire de modification d'un utilisateur|
@@ -236,64 +226,53 @@ J’utiliserai également Google Analytics afin d’avoir des informations sur l
 
 |Table|Champ|Type|Spécificités|
 |---    |:-:    |:-:    |:-:    |
-|Categorie|id|INT|PRIMARY KEY, NOT NULL, AUTO_INCREMENT, UNSIGNED |
-||name|VARCHAR (255)|NOT NULL|
-||createdAt|TIMESTAMP|NOT NULL, CURRENT_TIMESTAMP|
-||updatedAt|TIMESTAMP|NULL|
-||slug|VARCHAR (255)|NOT NULL|
-|SousCategorie|id|INT|PRIMARY KEY, NOT NULL, AUTO_INCREMENT, UNSIGNED |
-||name|VARCHAR (255)|NOT NULL|
-||createdAt|TIMESTAMP|NOT NULL, CURRENT_TIMESTAMP|
-||updatedAt|TIMESTAMP|NULL|
-||slug|VARCHAR (255)|NOT NULL|
-||categorie_id|INT|NOT NULL, FOREIGN KEY|
-|Type|id|INT|PRIMARY KEY, NOT NULL, AUTO_INCREMENT, UNSIGNED |
-||name|VARCHAR (255)|NOT NULL|
-||createdAt|TIMESTAMP|NOT NULL, CURRENT_TIMESTAMP|
-||updatedAt|TIMESTAMP|NULL|
-||slug|VARCHAR (255)|NOT NULL|
-||Sous_categorie_id|INT|NOT NULL, FOREIGN KEY|
-|Newsletter|id|INT|PRIMARY KEY, NOT NULL, AUTO_INCREMENT, UNSIGNED |
+|News|id|INT|PRIMARY KEY, NOT NULL, AUTO_INCREMENT, UNSIGNED |
 ||title|VARCHAR (255)|NOT NULL|
-||image|VARCHAR (255)|NOT NULL|
 ||content|VARCHAR (50000)|NOT NULL|
 ||createdAt|TIMESTAMP|NOT NULL, CURRENT_TIMESTAMP|
 ||updatedAt|TIMESTAMP|NULL|
-|Document|id|INT|PRIMARY KEY, NOT NULL, AUTO_INCREMENT, UNSIGNED |
-||utilisateur_id|INT|NOT NULL, FOREIGN KEY|
-||fichier|VARCHAR (255)|NOT NULL|
-||type|VARCHAR (255)|NOT NULL|
-||dateTelechargement|TIMESTAMP|NOT NULL, CURRENT_TIMESTAMP|
-||updated|TIMESTAMP|NULL|
+||slug|VARCHAR (255)|NOT NULL|
+||image|VARCHAR (255)|NOT NULL|
+|Events|id|INT|PRIMARY KEY, NOT NULL, AUTO_INCREMENT, UNSIGNED |
+||title|VARCHAR (255)|NOT NULL|
+||content|VARCHAR (50000)|NOT NULL|
+||createdAt|TIMESTAMP|NOT NULL, CURRENT_TIMESTAMP|
+||updatedAt|TIMESTAMP|NULL|
+||slug|VARCHAR (255)|NOT NULL|
+||date|DATETIME|NULL|
+||location||VARCHAR(255)|NULL|
 |User|id|INT|PRIMARY KEY, NOT NULL, AUTO_INCREMENT, UNSIGNED |
+||sex|BOOL|NOT NULL|
 ||firstname|VARCHAR (255)|NOT NULL|
 ||lastname|VARCHAR (255)|NOT NULL|
+||password|VARCHAR (255)|NOT NULL|
+||phoneNumber|INT|NOT NULL|
 ||email|VARCHAR (255)|NOT NULL|
 ||rôles|JSON|NOT NULL|
-||adress|VARCHAR (255)|NULL|
-||ville|VARCHAR (255)|NULL|
-||codePostal|INT|NULL|
+||function|VARCHAR (255)|NOT NULL|
+||city|VARCHAR (255)|NULL|
 ||newsletter|BOOL|NOT NULL|
 
 
-### h) Modèle Logique de Données
+### h) Modèle Conceptuel de Données
 
-![Modèle Logique de Données](https://raw.githubusercontent.com/PaulBrousses34/GarantiesOptimales/master/public/assets/images/photos/MLD.png)
+Incomplet en attente de validation et de precisions supplémentaires 
+
+![Modèle Conceptuel de Données](https://raw.githubusercontent.com/PaulBrousses34/AMF34/master/AMF34/public/images/MCD.png)
 
 
 ## 4. Organisation
 
 ### a) Planning
 
-Le développement du site se fera sur 6 semaines. Suite à la mise en production une veille technologique est à prévoir. Le développement du site ne pourra commencer que lorsque le cahier des charges sera complet. Chaque sprint dure 1 semaine sauf le 4eme qui est prévu sur 2 semaines. Le travail s’effectuera selon les principes de la méthodes Agile Scrum les cycles de développement seront donc découpés en sprint de la manière suivante : 
+Le développement du site se fera sur 4 semaines. Suite à la mise en production une veille technologique est à prévoir. Le développement du site ne pourra commencer que lorsque le cahier des charges sera complet. Le travail s’effectuera selon les principes de la méthodes Agile Scrum les cycles de développement seront donc découpés en sprint d'une semaine chacun de la manière suivante : 
 
 |Sprint|Tâches|
 |---    |:-:    |
 |1|Intégration HTML/CSS, création de la base de données, création de fixtures|
 |2|Création des Controllers et des méthodes, création des formulaires, création des templates associés à toutes les méthodes|
 |3|Mise en en place des diverses contraintes, gestion des rôles, création et configuration BackOffice|
-|4|Création des fiches produits|
-|5|Recherche et correction de bugs, tests unitaires et fonctionnels, mise en production|
+|4|Recherche et correction de bugs, tests unitaires et fonctionnels, mise en production|
 
 ### b) Gestion du versionning
 
