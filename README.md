@@ -81,13 +81,9 @@ Le design vis-à-vis de l’ancienne version se verra bien évidemment plus mode
 
 Au regard des éléments en ma possession et après un entretien avec Mr Xicoy, j’ai proposé une maquette avec la palette couleur correspondant au logo de l’AMF34. En attendant une validation, et des modifications afin de la valider je n’ai pas encore décliné aux autres pages et légendé mes maquettes.  
 
-##### Proposition page d’accueil Desktop : 
+##### Proposition page d’accueil Desktop/Mobile : 
 
-![Maquette Accueil Desktop](https://raw.githubusercontent.com/PaulBrousses34/AMF34/master/AMF34/public/images/MaquettePC.png)
-
-##### Proposition page d’accueil Mobile :
-
-![Maquette Accueil Mobile](https://raw.githubusercontent.com/PaulBrousses34/AMF34/master/AMF34/public/images/MaquetteMobile.png)
+![Maquette Accueil Desktop](https://raw.githubusercontent.com/PaulBrousses34/AMF34/master/AMF34/public/images/Maquettes.png)
 
 
 ## 3. Description fonctionnelle et technique 
