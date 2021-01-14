@@ -1,16 +1,25 @@
-# **NOUVEAU SITE WEB AASSOCIATION DES MAIRES DE FRANCES DE L'HERAULT** 
-
+# **NOUVEAU SITE WEB ASSOCIATION DES MAIRES DE FRANCES DE L'HERAULT** 
+-----------------------------------------------------------------------------------------------------------
 
 
 ![Logo AMF34](https://raw.githubusercontent.com/PaulBrousses34/AMF34/master/AMF34/public/images/logo.png)
 
 
 
+
+-----------------------------------------------------------------------------------------------------------
 ## AMF34 ##
 
 ### *Avec les élus locaux, l'Hérault avance* 
+-----------------------------------------------------------------------------------------------------------
+
+
 
 #### Projet de création d'un nouveau site web pour l'AMF34. En attente d'acceptation du devis ...
+
+
+-----------------------------------------------------------------------------------------------------------
+
 
 ## 1. Présentation du projet
 
