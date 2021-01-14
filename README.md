@@ -1,9 +1,9 @@
 # **NOUVEAU SITE WEB AASSOCIATION DES MAIRES DE FRANCES DE L'HERAULT** 
 
-![Logo AMF34](https://raw.githubusercontent.com/PaulBrousses34/AMF34/master/AMF34/images/logo.png)
+![Logo AMF34](https://raw.githubusercontent.com/PaulBrousses34/AMF34/master/AMF34/public/images/logo.png)
 
-## Garanties Optimales ##
-### *L'assurance des professionnels et des particuliers, des garanties optimales à prix minimal* 
+## AMF34 ##
+### *Avec les élus locaux, l'Hérault avance* 
 
 
 ## 1. Présentation du projet
